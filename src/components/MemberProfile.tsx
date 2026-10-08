@@ -46,15 +46,15 @@ export default function MemberProfile({ member }: Props) {
         animate={{ opacity: 1,  y: 0,   filter: 'blur(0px)' }}
         transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
         style={{
-          position:              'fixed',
-          top:                    0,
-          left:                   0,
-          right:                  0,
-          zIndex:                 50,
-          display:               'grid',
-          gridTemplateColumns:   '1fr auto 1fr',
-          alignItems:            'center',
-          padding:               'clamp(14px, 3vw, 22px) clamp(20px, 5vw, 56px)',
+          position:       'fixed',
+          top:             0,
+          left:            0,
+          right:           0,
+          zIndex:          50,
+          display:        'flex',
+          alignItems:     'center',
+          justifyContent: 'space-between',
+          padding:        'clamp(14px, 3vw, 22px) clamp(20px, 5vw, 56px)',
         }}
       >
         <Link
@@ -71,7 +71,6 @@ export default function MemberProfile({ member }: Props) {
             textDecoration:'none',
             transition:    'color 0.2s ease',
             padding:       '6px 0',
-            justifySelf:   'start',
           }}
           onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.82)' }}
           onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.35)' }}
@@ -93,7 +92,7 @@ export default function MemberProfile({ member }: Props) {
           YOUNG GOD WORLDWIDE
         </span>
 
-        <div />
+        <div style={{ width: 60 }} />
       </motion.nav>
 
       <div
@@ -235,7 +234,6 @@ export default function MemberProfile({ member }: Props) {
               fontSize:     'clamp(1rem, 2.5vw, 1.3rem)',
               lineHeight:    1.8,
               color:        'rgba(255,255,255,0.38)',
-              width:        '100%',
               maxWidth:      500,
               marginBottom:  48,
             }}
