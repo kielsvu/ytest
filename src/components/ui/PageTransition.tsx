@@ -12,7 +12,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
     if (prevPath.current === pathname) return
     prevPath.current = pathname
 
-    window.scrollTo(0, 0)
+    window.scrollTo({ top: 0, behavior: 'instant' })
     setVisible(true)
     const t = setTimeout(() => setVisible(false), 350)
     return () => clearTimeout(t)
