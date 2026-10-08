@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { config } from '@/data'
 import Cursor from '@/components/ui/Cursor'
@@ -6,6 +6,12 @@ import PageTransition from '@/components/ui/PageTransition'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 const ogImage = 'https://younggod-org.vercel.app/assets/og-image.jpg'
+
+export const viewport: Viewport = {
+  width:        'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
